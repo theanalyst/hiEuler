@@ -3,4 +3,4 @@
     (yield a)
     (setv (, a b) (, b (+ a b)))))
 
-(sum (filter (even? (take-while (lambda [x] (< x 4000000)) (fibs 0 1)))))
+(print "sum is" (sum (filter even? (take-while (lambda [x] (< x 4000000)) (fibs 0 1))))) 
