@@ -4,7 +4,7 @@
   (progn (let ((n 0))
      (for [x (xrange 999 100 -1) y (xrange x 100 -1)]
        (when (and (palindrome? (* x y)) (-> (* x y) (> n)))
-	 (setv n (* x y))))
+	 (setv n (* x y)))) ;; need something more lispy here?
      n)))
 
-(print "largest 3 digit palindrome is"(3-digit-palindrome))
+(print "largest 3 digit palindrome is" (3-digit-palindrome))
