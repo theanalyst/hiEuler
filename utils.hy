@@ -9,3 +9,11 @@
 (defn product-epoch [seq start end]
   "product of an epoch from `start` to `end`"
   (product (slice seq start end)))
+
+(defn factorial [n]
+  (fact-iter 1 1 n))
+
+(defn fact-iter [product counter num]
+  (if (> counter num)
+    product
+    (fact-iter (* counter product) (inc counter) num)))
