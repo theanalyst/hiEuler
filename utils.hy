@@ -17,3 +17,8 @@
   (if (> counter num)
     product
     (fact-iter (* counter product) (inc counter) num)))
+
+(defn fibs [a b]
+  (while true
+    (yield a)
+    (setv (, a b) (, b (+ a b)))))
