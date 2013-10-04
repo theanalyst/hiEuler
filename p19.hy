@@ -1,7 +1,7 @@
 (import [datetime])
 
 (defmacro inc! [item]
-  (quasiquote (setv (unquote item) (inc (unquote item)))))
+   `(setv ~item (inc ~item)))
 
 (defn count-sundays [start end]
   (let [[sundays 0]]
