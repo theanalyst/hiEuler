@@ -22,3 +22,6 @@
   (while true
     (yield a)
     (setv (, a b) (, b (+ a b)))))
+    
+(defmacro inc! [item]
+  `(setv ~item (inc ~item)))
